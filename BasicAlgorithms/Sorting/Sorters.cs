@@ -37,13 +37,13 @@ namespace BasicAlgorithms.Sorting
 
 		public static void BubbleSort(int[] a, int left, int right)
 		{
-			for (int i = 0; i <= right; i++)
+            for (int i = left; i <= right; i++)
 			{
-				for (int j = 1; j <= right-i; j++)
+                for (int j = left; j < right-i; j++)
 				{
-					if (a[j-1] > a[j])
+					if (a[j] > a[j+1])
 					{
-                        ArrayHelper.Swap(a, j-1, j);
+                        ArrayHelper.Swap(a, j, j+1);
 					}
 				}
 			}
@@ -57,10 +57,10 @@ namespace BasicAlgorithms.Sorting
 		public static void InsertionSort(int[] a, int left, int right)
 		{
             int temp, j;
-			for (int i = 1; i <= right; i++)
+            for (int i = left+1; i <= right; i++)
 			{
                 temp = a[i];
-				for (j = i-1; j >=0 && temp < a[j]; j--)
+				for (j = i-1; j >=left && temp < a[j]; j--)
 				{
                     a[j + 1] = a[j];
 				}
@@ -93,7 +93,7 @@ namespace BasicAlgorithms.Sorting
             int[] tmp = new int[right - left + 1];
             int tmpIndex = 0;
 
-            while (tmpIndex <= tmp.Length -1)
+            while (tmpIndex < tmp.Length)
             {
                 if (indexLeft > mid)
                 {
@@ -170,7 +170,7 @@ namespace BasicAlgorithms.Sorting
 			if (left < right)
 			{
                 int pivot = a[left];
-                int i = left+1;
+                int i = left;
                 int lt = left;
                 int gt = right;
 

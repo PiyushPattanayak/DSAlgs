@@ -41,6 +41,18 @@
       <Project>{4AA08E39-11A2-41DE-B0B6-1EC2EA3A2394}</Project>
       <Name>BasicAlgorithms</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DataStructures\DataStructures.csproj">
+      <Project>{4BFC0B11-CA6D-4424-957D-D54CE178B794}</Project>
+      <Name>DataStructures</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DynamicProgramming\DynamicProgramming.csproj">
+      <Project>{7E512F33-FE02-4509-82BF-48A75633C1A7}</Project>
+      <Name>DynamicProgramming</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Backtracking\Backtracking.csproj">
+      <Project>{84184EA6-01CF-4AAF-95EF-DB5F9CCA4E3C}</Project>
+      <Name>Backtracking</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

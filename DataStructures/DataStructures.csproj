@@ -3,10 +3,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4AA08E39-11A2-41DE-B0B6-1EC2EA3A2394}</ProjectGuid>
+    <ProjectGuid>{4BFC0B11-CA6D-4424-957D-D54CE178B794}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>BasicAlgorithms</RootNamespace>
-    <AssemblyName>BasicAlgorithms</AssemblyName>
+    <RootNamespace>DataStructures</RootNamespace>
+    <AssemblyName>DataStructures</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -30,18 +30,26 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Heap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UnionFind\IUnionFind.cs" />
-    <Compile Include="UnionFind\QuickFind.cs" />
-    <Compile Include="Helpers\ArrayHelper.cs" />
-    <Compile Include="Sorting\Sorters.cs" />
-    <Compile Include="Helpers\MeasurementHelpers.cs" />
-    <Compile Include="Helpers\MatrixRotation.cs" />
+    <Compile Include="MinHeap.cs" />
+    <Compile Include="Graph.cs" />
+    <Compile Include="Digraph.cs" />
+    <Compile Include="GraphProcessors\BFSPaths.cs" />
+    <Compile Include="GraphProcessors\DFSPaths.cs" />
+    <Compile Include="GraphProcessors\GraphTestMethods.cs" />
+    <Compile Include="GraphProcessors\ConnectedComponents.cs" />
+    <Compile Include="GraphProcessors\FindCycleInGraph.cs" />
+    <Compile Include="GraphProcessors\TopologicalSort.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="UnionFind\" />
-    <Folder Include="Helpers\" />
-    <Folder Include="Sorting\" />
+    <ProjectReference Include="..\BasicAlgorithms\BasicAlgorithms.csproj">
+      <Project>{4AA08E39-11A2-41DE-B0B6-1EC2EA3A2394}</Project>
+      <Name>BasicAlgorithms</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GraphProcessors\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

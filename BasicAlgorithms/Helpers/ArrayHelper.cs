@@ -23,6 +23,14 @@ namespace BasicAlgorithms.Helpers
             a[i] = a[j];
             a[j] = temp;
         }
+		
+        public static void ReverseArray(int[] a)
+		{
+            for (int i = 0; i < a.Length / 2; i++)
+            {
+                Swap(a, i, a.Length-1-i);
+            }
+		}
 
 		public static void PrintArray<T>(T[] array)
 		{

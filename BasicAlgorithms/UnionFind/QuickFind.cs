@@ -29,7 +29,7 @@ namespace BasicAlgorithms.UnionFind
 				}
 				result.Append(" ");
 			}
-			Console.WriteLine(result.ToString());
+            Console.WriteLine(result.ToString());
 		}
 
 		protected bool IsIndexWithinBounds(int p)
@@ -174,7 +174,7 @@ namespace BasicAlgorithms.UnionFind
 				return;
 			}
 
-            if (sz[pId] < sz[qId])
+			if (sz[pId] < sz[qId])
             {
                 id[pId] = qId;
                 sz[qId] += sz[pId];
